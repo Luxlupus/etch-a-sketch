@@ -1,0 +1,41 @@
+body {
+    font-family: "Alkatra", sans-serif;
+    background-color: rosybrown;
+}
+#headerContainer {
+    display: flex;
+    justify-content: center;
+    padding: 1em;    
+}
+#headerText {
+    font-size: 40px;
+    font-weight: bold;
+}
+#container {
+    display: flex;
+    justify-content: center;
+}
+#grid {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    
+}
+.gridRow {
+    display: flex;
+    width:inherit;
+    height:inherit;
+}
+.gridColumn {
+    display: flex;
+    width: inherit;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
