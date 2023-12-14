@@ -12,9 +12,19 @@
     <div id="headerContainer">
         <div id="headerText">Etch a sketch</div>
     </div>
-    <div id="container">
+    <div class="formContainer">
+        <form id="form">
+            <label for="numberBoxFirst">Size of grid: </label>
+                    <input min="1" max="100" class="buttons" id="numberBoxFirst" type="number" required>
+                    <input id="submitBtn" class="buttons" type="submit" value="Submit!">
+                    <input id="refreshBtn" class="buttons" type="reset" value="Start over!">
+            </form>
+    </div>
+    <div id="gridContainer">
         <div id="grid"></div>
     </div>
-    
+    <div id="footer">
+        <div id="copyright">Copyright © 2023 luxlupus</div>
+    </div>
 </body>
 </html>

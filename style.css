@@ -1,32 +1,42 @@
 body {
     font-family: "Alkatra", sans-serif;
-    background-color: rosybrown;
+    background-color: #b8d0eb;
 }
 #headerContainer {
     display: flex;
-    justify-content: center;
-    padding: 1em;    
+    justify-content: center;  
+    padding-top: 0.5em;
+}
+.noColor {
+    background-color: white;
 }
 #headerText {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: bold;
 }
-#container {
+#footer {
     display: flex;
     justify-content: center;
+    padding-top: 4em;
+}
+#gridContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5em;
 }
 #grid {
-    width: 500px;
-    height: 500px;
-    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    border: 2px solid #a663cc;
+    background-color: white;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 1/1;
-    
+    aspect-ratio: 1/1;        
 }
+
 .gridRow {
     display: flex;
     width:inherit;
@@ -35,7 +45,31 @@ body {
 .gridColumn {
     display: flex;
     width: inherit;
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
+    border: 1px solid rgba(128, 128, 128, 0.250);
+}
+.formContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 1em;
+}
+#numberBoxFirst {
+    width: 40px;
+}
+.buttons {
+    font-weight: bold;
+    border: 2px solid #a663cc;
+    border-radius: 15%;
+}
+.buttons:hover
+{
+    opacity: 1;
+    background-color: #b298dc;
+}
+.buttons:active
+{
+    background-color: #6f2dbd;
+}
+.color {
+    background-color: black;
 }
