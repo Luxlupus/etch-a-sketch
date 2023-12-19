@@ -27,24 +27,26 @@ function submitForm(event) {
         
 }
 
-function color(event) {
+function colorGrid(event) {
     const gridColumn = document.getElementsByClassName("gridColumn");
     for (const element of gridColumn) {
-    element.addEventListener('click', () => {
+    element.addEventListener('mouseover', () => {
             element.classList.add("color");
-            clickAndDrag();
         })
     }
 }
 
-function rmColor(event) {
-        const gridColumn = document.getElementsByClassName("gridColumn");
-        for (const element of gridColumn) {
-        element.addEventListener('dblclick', () => {
-            element.classList.add('noColor');
-            element.classList.remove("color")
-            })
-        }
+function chooseColor(event) {
+        const colorPicker = document.getElementById("colorPicker");
+        const pickedColor = colorPicker.value;
+        //finding desired element in style.css
+        const stylesheet = document.styleSheets[0];
+        const boxParaRule = [...stylesheet.cssRules].find(
+        (r) => r.selectorText === ".color",
+        );
+        boxParaRule.style.setProperty("background-color", pickedColor);
+        colorPicker.disabled = true;
+        console.log(pickedColor);
 }
 
 window. onload = function() { document. getElementById("numberBoxFirst"). focus(); }
@@ -53,13 +55,10 @@ const form = document.getElementById("form");
 form.addEventListener('submit', submitForm);
 form.addEventListener('reset', () => { window.parent.location = window.parent.location.href; });
 
+const colorForm = document.getElementById("colorForm");
+colorForm.addEventListener('input', chooseColor);
+
 const grid = document.getElementById("grid");
-//let gridClicked = true;
-grid.addEventListener('mouseenter', function (event) {
-    color();
-    rmColor();
-    });
-
-
+grid.addEventListener('mousedown', () =>  {colorGrid()});
 
 

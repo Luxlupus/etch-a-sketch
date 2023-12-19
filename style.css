@@ -2,7 +2,7 @@ body {
     font-family: "Alkatra", sans-serif;
     background-color: #b8d0eb;
 }
-#headerContainer {
+#headerContainer, #howToContainer {
     display: flex;
     justify-content: center;  
     padding-top: 0.5em;
@@ -27,7 +27,7 @@ body {
 #grid {
     width: 400px;
     height: 400px;
-    border: 2px solid #a663cc;
+    border: 1px solid #a663cc;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@ body {
 .gridColumn {
     display: flex;
     width: inherit;
-    border: 1px solid rgba(128, 128, 128, 0.250);
+    border: 1px solid rgba(128, 128, 128, 0.100);
 }
 .formContainer {
     display: flex;
@@ -53,8 +53,15 @@ body {
     flex-wrap: nowrap;
     padding: 1em;
 }
+#colorFormContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
 #numberBoxFirst {
     width: 40px;
+    border: 2px solid #a663cc;
+    border-radius: 15%;
 }
 .buttons {
     font-weight: bold;
